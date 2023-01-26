@@ -1,1 +1,501 @@
 
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <link rel="stylesheet" href="zone.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/Paginas/MaterialDesign-Webfont-master/MaterialDesign-Webfont-master/css/materialdesignicons.min.css" media="all" type="text/css"/>
+  
+  <style>
+    *{
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    outline: none;
+}
+
+p{
+    cursor: default;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover{
+    color: blue;
+}
+
+body{
+    background-color: rgb(20, 20, 20);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+body.desable{
+    background-color: rgba(0, 0, 0, 0.87);
+    color: rgba(255, 255, 255, 0.253);
+    transition: .2s ease-in-out;
+}
+
+body.desable .bar{
+    background-color: rgb(27, 27, 27);
+    color: rgba(255, 255, 255, 0.253);
+    transition: .5s ease-in-out;
+}
+
+body.desable #coment{
+    background-color: rgb(216, 216, 216);
+    color: rgba(59, 59, 59, 0.863);
+    transition: .2s ease-in-out;
+}
+
+body.desable .e-coment{
+    background-color: rgba(30, 143, 255, 0.685);
+    color: rgba(255, 255, 255, 0.664);
+    transition: .2s ease-in-out;
+}
+
+body.desable .denu{
+    background-color: rgba(255, 68, 0, 0.685);
+    color: rgba(255, 255, 255, 0.664);
+    transition: .2s ease-in-out;
+}
+
+body.desable .ocul{
+    background-color: rgba(0, 0, 255, 0.685);
+    color: rgba(255, 255, 255, 0.664);
+    transition: .2s ease-in-out;
+}
+
+.bar{
+    height: 60px;
+    width: 100%;
+    padding: 2px;
+    display: flex;
+    background-color: rgb(31, 31, 31);
+    position: fixed;
+}
+
+.bar h2{
+    position: absolute;
+    cursor: default;
+}
+
+.menu{
+    border: 0px solid;
+    height: 25px;
+    width: 25px;
+    margin-top: 14px;
+    cursor: pointer;
+    margin-left: 965px;
+}
+
+.menu:active{
+    background-color: rgb(66, 66, 66);
+    transition: .1s ease-in-out;
+}
+
+.linha-1, .linha-2, .linha-3{
+    width: 100%;
+    height: 3px;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.linha-1{
+    margin: 2px 0px;
+}
+
+.linha-2{
+    margin: 6px 0px;
+}
+
+.linha-3{
+    margin: 6px 0px;
+}
+
+
+#lateral{
+    position: fixed;
+    background-color: rgb(22, 22, 22);
+    height: 100%;
+    width: 300px;
+    margin-top: 64px;
+    margin-left: 1025px;
+    transition: .5s ease-in-out;
+}
+
+#lateral.active{
+    margin-left: 725px;
+}
+
+
+.bar h2{
+    margin: 14px 3px;
+}
+
+.pesquisa{
+    margin: 10px 675px;
+    padding: 8px;
+    padding-left: 4%;
+    border-radius: 50px;
+    font-size: 16px;
+    letter-spacing: .8px;
+    width: 230px;
+    color: #000;
+    position: absolute;
+    transition: .5s ease-in-out;
+}
+
+
+.selecao{
+    cursor: pointer;
+    margin: 5px 2px;
+    border: 1px solid transparent;
+    height: 50px;
+    width: 275px;
+
+}
+
+.selecao h3{
+    margin: 13px 5px;
+}
+
+.selecao h3:hover{
+    color: blue;
+}
+
+.out{
+    cursor: pointer;
+    margin: 300px 2px;
+    border: 1px solid transparent;
+    height: 50px;
+    width: 298px;
+}
+
+.out h3{
+    margin: 13px 5px;
+}
+
+.out h3:hover{
+    color: blue;
+}
+
+.carga{
+    background-color: blue;
+    height: 3px;
+    width: 0px;
+    position: absolute;
+    margin: 62px -2px;
+    transition: 2s ease-in-out;
+}
+
+.main{
+    border: 0px solid;
+    width: 950px;
+    margin-left: 20px;
+    height: 2000px;
+    border-radius: 8px;
+    padding: 5px;
+    box-shadow: .5px .5px 10px .5px rgb(0, 0, 0);
+}
+
+.main h1{
+    margin: 5px 20px;
+    letter-spacing: 1px;
+}
+
+
+.img-a{
+    width: 100%;
+}
+
+#coment{
+    font-size: 17px;
+    padding: 10px;
+    font-style: normal;
+    font-weight: 600;
+    border-radius: 6px;
+    height:100px;
+    width: 400px;
+}
+
+.e-coment{
+    background-color: dodgerblue;
+    padding: 10px;
+    width: 52px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.e-coment:hover{
+    box-shadow: .5px .5px 10px .5px dodgerblue;
+}
+
+.denu{
+    background-color: orangered;
+    padding: 10px;
+    width: 82px;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-left: 78px;
+    margin-top: -40px;
+}
+
+.denu:hover{
+    box-shadow: .5px .5px 10px .5px orangered;
+}
+
+.ocul{
+    background-color: blue;
+    padding: 10px;
+    width: 213px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-left: 186px;
+    margin-top: -40px;
+}
+
+.ocul:hover{
+    box-shadow: .5px .5px 10px .5px blue;
+}
+
+
+#scroll-menu{
+    background-color: rgb(0, 0, 0);
+    box-shadow: .5px .5px 10px .5px rgb(58, 58, 58);
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+    position: fixed;
+    margin-left: 28px;
+    margin-top: -1490px;
+}
+
+
+#info{
+    border: 0px solid;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: .5px .5px 10px .5px black;
+}
+
+.area{
+    border: 0px solid;
+    height: 520px;
+    width: 948px;
+    display: flex;
+    border-radius: 8px;
+    box-shadow: .5px .5px 10px .5px black;
+}
+
+.area-a{
+    border: 0px solid;
+    width: 50%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.area-b{
+    border: 0px solid;
+    width: 50%;
+    height: 100%;
+    border-radius: 8px;
+}    
+  </style>
+</head>
+<body>
+            <div class="bar">
+
+                <h2>Game-zone</h2>
+
+                <div class="pesquisar">
+                        <input  id="pesquisa" class="pesquisa" type="text" name="search" placeholder="Pesquisar..." title="Pesquisar" oninput="pesquisar()">
+                </div>
+
+                <div id="menu" class="menu">
+                    <div class="linha-1"></div>
+                    <div class="linha-2"></div>
+                    <div class="linha-3"></div>
+                </div>
+                <div class="carga" id="carga"></div>
+            </div>
+
+            <n id="n">
+
+                <div id="lateral" class="lateral">
+                        <div class="selecao">
+                            <a href="#"><h3>Início</h3></a>
+                        </div>
+
+                        <div class="selecao">
+                            <a href="#"><h3>Chat</h3></a>
+                        </div>
+
+                        <div class="selecao">
+                            <a href="#"><h3>Notificaçôes</h3></a>
+                        </div>
+
+                        <div class="selecao">
+                            <a href="#"><h3>Conta</h3></a>
+                        </div>
+
+                        <div class="out">
+                            <a href="#"><h3>Log out</h3></a>
+                        </div>
+            </div>
+            <br><br><br><br>
+
+            <main class="main" id="main">
+                <div class="imagem">
+                    <img class="img-a" src="image/windows-10-anniversary-1920x1080-1.jpg" alt="imagem">
+                        <br><br>
+                    <p id="info">
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+
+                        <br><br>
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                        esta em nomes voltas de frotas de fritos
+                    </p>
+                        <br>
+                    <textarea name="comentario" id="coment" placeholder="Adicionar comentário..."></textarea>
+                    <div class="e-coment">Enviar</div>
+                    <div class="denu">Denunciar</div>
+                    <div class="ocul">Não mostrar novamente</div>
+                </div>
+                    <br>
+
+                <div class="area">
+                    <div class="area-a">
+                        <h3 align="center">Area A</h3>
+                <i class="fa fa-home"></i>
+                <i class="fa fa-users"></i>
+
+                    </div>
+                    <div class="area-b">
+                        <h3 align="center">Area B</h3>
+                    </div>
+                </div>
+
+            </main>
+
+            <div id="scroll-menu">
+                <i class="fa fa-home"></i>
+            </div>
+
+
+        </n>
+
+
+
+
+
+
+    <script src="zone.js">
+      var menu = document.getElementById('menu');
+var menuBar = document.getElementById('lateral');
+var n = document.getElementById('n');
+var corpo = document.querySelector('body');
+
+menu.addEventListener('click', function () {
+    menuBar.classList.toggle('active');
+    corpo.classList.toggle('desable');
+    console.log('activado');
+});
+
+
+n.addEventListener('click', function () {
+    menuBar.classList.remove('active');
+    corpo.classList.remove('desable');
+    console.log('desactivado');
+});
+
+
+let barra = document.getElementById('carga');
+function carregamento() {
+
+        barra.style.width = "600px";
+        setTimeout(function() {
+        barra.style.width = "920px";
+        }, 2500);
+
+        setTimeout(function() {
+        barra.style.width = "1300px";            
+        }, 6000);
+
+        setTimeout(function() {
+        barra.style.backgroundColor = "transparent"; 
+        barra.style.transition = ".0s ease-in";
+        }, 7500);
+}
+carregamento();
+
+
+var input = document.getElementById('pesquisa');
+input.value();
+
+
+function pesquisar() {
+    document.getElementById('coment').innerHTML = input.value;
+}
+
+input.addEventListener('keypress', function (event) {
+    if (event.keyCode === 13) {
+        document.getElementById('coment').innerHTML = input.value;
+    }
+});
+
+
+    </script>
+    <script src="jquery.min.js"></script>
+</body>
+</html>
